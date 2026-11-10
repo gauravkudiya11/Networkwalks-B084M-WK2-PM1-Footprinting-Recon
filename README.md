@@ -38,13 +38,11 @@ In this project I footprinted the lab target **networkwalks.com** using six buil
 
 | 🧩 Component | ⚙️ Configuration |
 |---|---|
-| 🧰 Hypervisor | VMware Workstation Pro 26H1u1 (26.0.1) |
-| 🖥️ Host OS | Windows 11 Pro |
+| 🧰 Hypervisor | VMware Workstation Pro |
+| 🖥️ Host OS | Windows 11 |
 | 🐉 Attacker machine | Kali Linux 2026.3 (rolling) |
-| 🧠 VM resources | 3024 MB RAM, 2 processors, 100 GB disk |
+| 🧠 VM resources | 3 GB RAM, 2 processors |
 | 🌐 VM network mode | NAT |
-| 🐧 Kali IP address | 192.168.60.128/24 (DHCP) |
-| 🌍 DNS resolver | 192.168.60.2 (VMware NAT) |
 | 🎯 Target | networkwalks.com (provided for this lab) |
 | 📅 Date performed | 9 November 2026 |
 
@@ -138,7 +136,7 @@ nslookup networkwalks.com
 
 **Findings:**
 
-- Resolver used: `192.168.60.2` (the VMware NAT DNS service)
+- Resolved through the VMware NAT DNS service
 - `networkwalks.com` resolves to **192.232.216.135** (non-authoritative answer)
 
 **Why it matters:** Knowing the real IP lets an attacker scan the server directly, find other sites on the same IP, and map the infrastructure.
